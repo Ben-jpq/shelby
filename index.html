@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Story Game: Jose & Shelbie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+      color: #333;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ff99cc;
+    }
+    button {
+      background-color: #ff66a3;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 8px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff3385;
+    }
+    #story {
+      margin-bottom: 20px;
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Love Story: Jose & Shelbie</h1>
+  <div id="story">
+    Jose just saw Shelbie at a cafe. What should he do?
+  </div>
+
+  <div id="choices">
+    <button onclick="choose(1)">Say hello and introduce himself.</button>
+    <button onclick="choose(2)">Smile and keep quiet.</button>
+  </div>
+
+  <script>
+    function choose(option) {
+      const story = document.getElementById('story');
+      const choices = document.getElementById('choices');
+
+      if (option === 1) {
+        story.innerHTML = "Jose: Hi, I’m Jose. I couldn’t help but notice you here.<br>Shelbie smiles back.<br>What should Jose say next?";
+        choices.innerHTML = `
+          <button onclick="choose(3)">Ask her out for coffee sometime.</button>
+          <button onclick="choose(4)">Compliment her smile.</button>
+        `;
+      } else if (option === 2) {
+        story.innerHTML = "Jose decides to just smile quietly. Shelbie looks curious but walks away. Jose misses his chance to talk to her.<br><strong>Game Over.</strong> Want to try again?";
+        choices.innerHTML = `
+          <button onclick="restart()">Yes</button>
+          <button onclick="end()">No</button>
+        `;
+      } else if (option === 3) {
+        story.innerHTML = "Shelbie: I’d love that! How about tomorrow afternoon?<br>Jose and Shelbie exchange numbers.<br>Do you want to continue to the date?";
+        choices.innerHTML = `
+          <button onclick="choose(5)">Yes</button>
+          <button onclick="choose(6)">No</button>
+        `;
+      } else if (option === 4) {
+        story.innerHTML = "Shelbie: Thank you! That’s so sweet of you.<br>Jose and Shelbie chat for a while and exchange numbers.<br>Do you want to continue to the date?";
+        choices.innerHTML = `
+          <button onclick="choose(5)">Yes</button>
+          <button onclick="choose(6)">No</button>
+        `;
+      } else if (option === 5) {
+        story.innerHTML = "The day of the date arrives. Where should Jose take Shelbie?";
+        choices.innerHTML = `
+          <button onclick="choose(7)">To a cozy coffee shop.</button>
+          <button onclick="choose(8)">To a walk in the park.</button>
+        `;
+      } else if (option === 6) {
+        story.innerHTML = "Jose feels nervous but hopeful. The story ends here.<br>Thanks for playing!";
+        choices.innerHTML = `
+          <button onclick="restart()">Play Again</button>
+        `;
+      } else if (option === 7) {
+        story.innerHTML = "At the coffee shop, they talk for hours and laugh a lot.<br>Jose feels a strong connection.<br>Shelbie smiles and says she’s happy to have met him.<br><strong>Congrats! Their love story has just begun!</strong>";
+        choices.innerHTML = `
+          <button onclick="restart()">Play Again</button>
+        `;
+      } else if (option === 8) {
+        story.innerHTML = "While walking in the park, it suddenly starts to rain.<br>Jose shares his jacket with Shelbie.<br>They run to a nearby gazebo and talk about their dreams.<br>Shelbie says she feels special with Jose.<br><strong>Congrats! They have a beautiful start!</strong>";
+        choices.innerHTML = `
+          <button onclick="restart()">Play Again</button>
+        `;
+      }
+    }
+
+    function restart() {
+      const story = document.getElementById('story');
+      const choices = document.getElementById('choices');
+      story.innerHTML = "Jose just saw Shelbie at a cafe. What should he do?";
+      choices.innerHTML = `
+        <button onclick="choose(1)">Say hello and introduce himself.</button>
+        <button onclick="choose(2)">Smile and keep quiet.</button>
+      `;
+    }
+
+    function end() {
+      const story = document.getElementById('story');
+      const choices = document.getElementById('choices');
+      story.innerHTML = "Thanks for playing!";
+      choices.innerHTML = "";
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Story Game: Jose & Shelbie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+      color: #333;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ff99cc;
+    }
+    button {
+      background-color: #ff66a3;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 8px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff3385;
+    }
+    #story {
+      margin-bottom: 20px;
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Love Story: Jose & Shelbie</h1>
+  <div id="story">
+    Jose just saw Shelbie at a cafe. What should he do?
+  </div>
+
+  <div id="choices">
+    <button onclick="choose(1)">Say hello and introduce himself.</button>
+    <button onclick="choose(2)">Smile and keep quiet.</button>
+  </div>
+
+  <script>
+    function choose(option) {
+      const story = document.getElementById('story');
+      const choices = document.getElementById('choices');
+
+      if (option === 1) {
+        story.innerHTML = "Jose: Hi, I’m Jose. I couldn’t help but notice you here.<br>Shelbie smiles back.<br>What should Jose say next?";
+        choices.innerHTML = `
+          <button onclick="choose(3)">Ask her out for coffee sometime.</button>
+          <button onclick="choose(4)">Compliment her smile.</button>
+        `;
+      } else if (option === 2) {
+        story.innerHTML = "Jose decides to just smile quietly. Shelbie looks curious but walks away. Jose misses his chance to talk to her.<br><strong>Game Over.</strong> Want to try again?";
+        choices.innerHTML = `
+          <button onclick="restart()">Yes</button>
+          <button onclick="end()">No</button>
+        `;
+      } else if (option === 3) {
+        story.innerHTML = "Shelbie: I’d love that! How about tomorrow afternoon?<br>Jose and Shelbie exchange numbers.<br>Do you want to continue to the date?";
+        choices.innerHTML = `
+          <button onclick="choose(5)">Yes</button>
+          <button onclick="choose(6)">No</button>
+        `;
+      } else if (option === 4) {
+        story.innerHTML = "Shelbie: Thank you! That’s so sweet of you.<br>Jose and Shelbie chat for a while and exchange numbers.<br>Do you want to continue to the date?";
+        choices.innerHTML = `
+          <button onclick="choose(5)">Yes</button>
+          <button onclick="choose(6)">No</button>
+        `;
+      } else if (option === 5) {
+        story.innerHTML = "The day of the date arrives. Where should Jose take Shelbie?";
+        choices.innerHTML = `
+          <button onclick="choose(7)">To a cozy coffee shop.</button>
+          <button onclick="choose(8)">To a walk in the park.</button>
+        `;
+      } else if (option === 6) {
+        story.innerHTML = "Jose feels nervous but hopeful. The story ends here.<br>Thanks for playing!";
+        choices.innerHTML = `
+          <button onclick="restart()">Play Again</button>
+        `;
+      } else if (option === 7) {
+        story.innerHTML = "At the coffee shop, they talk for hours and laugh a lot.<br>Jose feels a strong connection.<br>Shelbie smiles and says she’s happy to have met him.<br><strong>Congrats! Their love story has just begun!</strong>";
+        choices.innerHTML = `
+          <button onclick="restart()">Play Again</button>
+        `;
+      } else if (option === 8) {
+        story.innerHTML = "While walking in the park, it suddenly starts to rain.<br>Jose shares his jacket with Shelbie.<br>They run to a nearby gazebo and talk about their dreams.<br>Shelbie says she feels special with Jose.<br><strong>Congrats! They have a beautiful start!</strong>";
+        choices.innerHTML = `
+          <button onclick="restart()">Play Again</button>
+        `;
+      }
+    }
+
+    function restart() {
+      const story = document.getElementById('story');
+      const choices = document.getElementById('choices');
+      story.innerHTML = "Jose just saw Shelbie at a cafe. What should he do?";
+      choices.innerHTML = `
+        <button onclick="choose(1)">Say hello and introduce himself.</button>
+        <button onclick="choose(2)">Smile and keep quiet.</button>
+      `;
+    }
+
+    function end() {
+      const story = document.getElementById('story');
+      const choices = document.getElementById('choices');
+      story.innerHTML = "Thanks for playing!";
+      choices.innerHTML = "";
+    }
+  </script>
+</body>
+</html>
